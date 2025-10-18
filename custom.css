@@ -1,0 +1,8 @@
+@media all and (max-width: 767px){
+  .cover.fullscreen .slides li{
+    height: 100vh;
+    padding-top: 160px;
+  }
+}
+.hover-tile .hover-state{ opacity: 1 !important; }
+.hover-tile .hover-state *{ transform: translate3d(0, 0px, 0) scale(1) !important; }
