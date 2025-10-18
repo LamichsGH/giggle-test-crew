@@ -6,3 +6,11 @@
 }
 .hover-tile .hover-state{ opacity: 1 !important; }
 .hover-tile .hover-state *{ transform: translate3d(0, 0px, 0) scale(1) !important; }
+
+/* Remove white gaps between sections */
+section + section {
+  margin-top: 0 !important;
+}
+.main-container section {
+  margin-bottom: 0 !important;
+}
