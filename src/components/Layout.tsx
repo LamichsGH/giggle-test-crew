@@ -9,38 +9,13 @@ export default function Layout({ children }: LayoutProps) {
   const location = useLocation();
 
   useEffect(() => {
-    // Load external scripts
-    const scripts = [
-      "/js/jquery.min.js",
-      "/js/bootstrap.min.js",
-      "/js/flexslider.min.js",
-      "/js/lightbox.min.js",
-      "/js/masonry.min.js",
-      "/js/twitterfetcher.min.js",
-      "/js/spectragram.min.js",
-      "/js/ytplayer.min.js",
-      "/js/countdown.min.js",
-      "/js/smooth-scroll.min.js",
-      "/js/parallax.js",
-      "/js/scripts.js",
-    ];
-
-    scripts.forEach((src) => {
-      const script = document.createElement("script");
-      script.src = src;
-      script.async = false;
-      document.body.appendChild(script);
-    });
-
-    return () => {
-      scripts.forEach((src) => {
-        const script = document.querySelector(`script[src="${src}"]`);
-        if (script) {
-          document.body.removeChild(script);
-        }
-      });
-    };
-  }, []);
+    // Scripts are already loaded in index.html
+    // Reinitialize on route change if needed
+    const $ = (window as any).jQuery;
+    if ($ && typeof $ === 'function') {
+      // Reinitialize any jQuery plugins if needed
+    }
+  }, [location]);
 
   return (
     <>
