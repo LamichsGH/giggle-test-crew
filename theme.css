@@ -689,8 +689,11 @@ footer.bg-dark li,
   opacity: 0;
 }
 .background-image-holder img {
-  display: none;
+  display: block;
+  width: 100%;
+  height: auto;
 }
+
 .background-multiply .background-image-holder {
   background-color: #25382c !important;
   background-blend-mode: multiply;
