@@ -247,7 +247,27 @@ as a tool
         <script src="/scripts.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>AOS.init({duration: 800, once: true, offset: 100});</script>
-
+        <script>
+        $(function(){
+          var $acc = $('.accordion');
+          if($acc.length){
+            $acc.off('click.faq').on('click.faq', 'li .title', function(e){
+              e.preventDefault();
+              var $li = $(this).closest('li');
+              var $wrap = $li.closest('.accordion');
+              if($wrap.hasClass('one-open')){
+                $wrap.find('li').not($li).removeClass('active');
+                $li.addClass('active');
+              } else {
+                $li.toggleClass('active');
+              }
+              if (window.mr_parallax && typeof mr_parallax.windowLoad === 'function') {
+                setTimeout(mr_parallax.windowLoad, 500);
+              }
+            });
+          }
+        });
+        </script>
 
     </body>
 </html>
