@@ -1,5 +1,2 @@
-import { createRoot } from "react-dom/client";
-import App from "./App";
+// Placeholder file for build system
 import "./index.css";
-
-createRoot(document.getElementById("root")!).render(<App />);
