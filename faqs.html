@@ -32,6 +32,7 @@
         <link href="/custom.css" rel="stylesheet" type="text/css" media="all" />
         <link href='https://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600,700" rel="stylesheet" type="text/css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
 
     <body class="scroll-assist">
@@ -113,7 +114,7 @@
 		        </div>
 		        
 		    </section>
-			<section class="bg-primary">
+		<section class="bg-primary" data-aos="fade-up">
 		        <div class="container">
 		            <div class="row">
 		                <div class="col-sm-12 text-center">
@@ -125,7 +126,7 @@
 		                </div>
 		            </div>
 		            
-		            <div class="row">
+		            <div class="row" data-aos="fade-up" data-aos-delay="200">
 		                <div class="col-sm-10 col-sm-offset-1">
 		                    <ul class="accordion accordion-2 one-open">
 		                        <li>
@@ -186,8 +187,8 @@
 		        </div>
 		        
 		    </section>
-			
-			<section class="image-bg parallax pt240 pb180 pt-xs-80 pb-xs-80">
+		
+		<section class="image-bg parallax pt240 pb180 pt-xs-80 pb-xs-80" data-aos="fade-up">
 				<div class="background-image-holder">
 					<img alt="image" class="background-image" src="/glo4.jpg">
 				</div>
@@ -244,6 +245,8 @@ as a tool
         <script src="/smooth-scroll.min.js"></script>
         <script src="/parallax.js"></script>
         <script src="/scripts.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>AOS.init({duration: 800, once: true, offset: 100});</script>
 
 
     </body>
