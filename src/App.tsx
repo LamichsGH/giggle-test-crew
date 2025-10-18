@@ -7,8 +7,8 @@ function Navigation() {
       <nav>
         <div className="nav-bar">
           <div className="module left">
-            <Link to="/">
-              <img className="logo logo-dark" alt="Globall" src="/globall.png" style={{ maxHeight: '60px' }} />
+            <Link to="/" className="logo-text">
+              glo ball
             </Link>
           </div>
           <div className="module widget-handle mobile-toggle right visible-sm visible-xs">
@@ -17,10 +17,10 @@ function Navigation() {
           <div className="module-group right">
             <div className="module left">
               <ul className="menu">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">Mission</Link></li>
-                <li><Link to="/faqs">FAQ's</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
+                <li><Link to="/">HOME</Link></li>
+                <li><Link to="/about">MISSION</Link></li>
+                <li><Link to="/faqs">FAQ'S</Link></li>
+                <li><Link to="/contact">CONTACT</Link></li>
               </ul>
             </div>
           </div>
@@ -78,10 +78,12 @@ function HomePage() {
           <div className="container v-align-transform">
             <div className="row">
               <div className="col-sm-12 text-center">
-                <img alt="Globall" src="/index.png" style={{ maxWidth: '400px', marginBottom: '30px' }} />
-                <h5 className="large bold mb40 mb-xs-16" style={{ color: 'white', fontSize: '24px' }}>
+                <h1 className="hero-title">
+                  glo ball
+                </h1>
+                <p className="hero-subtitle">
                   We travel to communities globally where children face extreme poverty, conflict, & social challenges, using football as a tool
-                </h5>
+                </p>
               </div>
             </div>
           </div>
