@@ -14,10 +14,17 @@ section + section { margin-top: 0 !important; }
 /* Ensure parallax backgrounds cover entire section without seams */
 .parallax > .background-image-holder,
 .parallax .slides li > .background-image-holder {
-  top: 0 !important;
-  height: 100% !important;
+  top: -1px !important;              /* subpixel seam fix */
+  height: calc(100% + 2px) !important; /* extend to cover edges */
 }
 .background-image-holder { 
   background-position: 50% 50% !important; 
   background-size: cover !important; 
 }
+
+/* Hide tiny seams on image sections */
+.image-bg { overflow: hidden; }
+
+/* Remove unintended separators from nav and within sections */
+.nav-bar, .nav-utility { border-bottom: 0 !important; }
+.main-container section hr { border: 0 !important; height: 0 !important; margin: 0 !important; }
