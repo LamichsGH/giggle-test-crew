@@ -5,12 +5,12 @@ export default function Contact() {
     <Layout>
       <section className="fullscreen image-bg">
         <div className="background-image-holder">
-          <img alt="image" className="background-image" src="/img/contact.jpg" />
+          <img alt="image" className="background-image" src="/contact.jpg" />
         </div>
         <div className="container v-align-transform">
           <div className="row">
             <div className="col-sm-12 text-center">
-              <img alt="Pic" src="/img/contact.png" />
+              <img alt="Pic" src="/contact.png" />
               <h5 className="mb20 mb-xs-16 large">
                 If you have any questions or need to contact us, please email;{" "}
               </h5>

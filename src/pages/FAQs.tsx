@@ -6,12 +6,12 @@ export default function FAQs() {
     <Layout>
       <section className="fullscreen image-bg">
         <div className="background-image-holder">
-          <img alt="image" className="background-image" src="/img/globall2.jpg" />
+          <img alt="image" className="background-image" src="/globall2.jpg" />
         </div>
         <div className="container v-align-transform">
           <div className="row">
             <div className="col-sm-12 text-center">
-              <img alt="Pic" src="/img/questions.png" />
+              <img alt="Pic" src="/questions.png" />
               <h5 className="large bold mb40 mb-xs-16"> </h5>
             </div>
           </div>
@@ -97,7 +97,7 @@ export default function FAQs() {
 
       <section className="image-bg parallax pt240 pb180 pt-xs-80 pb-xs-80">
         <div className="background-image-holder">
-          <img alt="image" className="background-image" src="/img/glo4.jpg" />
+          <img alt="image" className="background-image" src="/glo4.jpg" />
         </div>
         <div className="container">
           <div className="row">

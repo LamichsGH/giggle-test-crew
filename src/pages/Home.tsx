@@ -6,12 +6,12 @@ export default function Home() {
     <Layout>
       <section className="fullscreen image-bg">
         <div className="background-image-holder">
-          <img alt="image" className="background-image" src="/img/index.jpg" />
+          <img alt="image" className="background-image" src="/index.jpg" />
         </div>
         <div className="container v-align-transform">
           <div className="row">
             <div className="col-sm-12 text-center">
-              <img alt="Pic" src="/img/index.png" />
+              <img alt="Pic" src="/index.png" />
               <h5 className="large bold mb40 mb-xs-16">
                 We travel to communities globally where children face extreme poverty, conflict, & social
                 challenges, using football as a tool
@@ -23,7 +23,7 @@ export default function Home() {
 
       <section className="image-bg parallax pt240 pb180 pt-xs-80 pb-xs-80">
         <div className="background-image-holder">
-          <img alt="image" className="background-image" src="/img/globall1.jpg" />
+          <img alt="image" className="background-image" src="/globall1.jpg" />
         </div>
         <div className="container">
           <div className="row">
@@ -43,7 +43,7 @@ export default function Home() {
 
       <section className="image-bg parallax pt240 pb180 pt-xs-80 pb-xs-80">
         <div className="background-image-holder">
-          <img alt="image" className="background-image" src="/img/globall2.jpg" />
+          <img alt="image" className="background-image" src="/globall2.jpg" />
         </div>
         <div className="container">
           <div className="row">
@@ -60,14 +60,14 @@ export default function Home() {
 
       <section className="image-bg parallax pt240 pb180 pt-xs-80 pb-xs-80">
         <div className="background-image-holder">
-          <img alt="image" className="background-image" src="/img/glo1.jpg" />
+          <img alt="image" className="background-image" src="/glo1.jpg" />
         </div>
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-10 col-md-offset-1 text-center">
               <h1 className="large bold uppercase mb40 mb-xs-16">Follow Us</h1>
               <a href="https://www.instagram.com/globalluk/">
-                <img className="image-xs" alt="" src="/img/insta.png" />
+                <img className="image-xs" alt="" src="/insta.png" />
               </a>
             </div>
           </div>

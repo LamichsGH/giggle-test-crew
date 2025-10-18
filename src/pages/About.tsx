@@ -5,12 +5,12 @@ export default function About() {
     <Layout>
       <section className="fullscreen image-bg">
         <div className="background-image-holder">
-          <img alt="image" className="background-image" src="/img/globall1.jpg" />
+          <img alt="image" className="background-image" src="/globall1.jpg" />
         </div>
         <div className="container v-align-transform">
           <div className="row">
             <div className="col-sm-12 text-center">
-              <img alt="Pic" src="/img/about.png" />
+              <img alt="Pic" src="/about.png" />
               <h5 className="large bold mb40 mb-xs-16"> </h5>
             </div>
           </div>
@@ -72,14 +72,14 @@ export default function About() {
 
       <section className="image-bg parallax pt240 pb180 pt-xs-80 pb-xs-80">
         <div className="background-image-holder">
-          <img alt="image" className="background-image" src="/img/glo2.jpg" />
+          <img alt="image" className="background-image" src="/glo2.jpg" />
         </div>
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-10 col-md-offset-1 text-center">
               <h1 className="large bold uppercase mb40 mb-xs-16">Follow Us</h1>
               <a href="https://www.instagram.com/globalluk/">
-                <img className="image-xs" alt="" src="/img/insta.png" />
+                <img className="image-xs" alt="" src="/insta.png" />
               </a>
             </div>
           </div>
