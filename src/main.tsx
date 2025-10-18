@@ -1,5 +1,7 @@
 import { createRoot } from "react-dom/client";
-import App from "./App";
-import "./index.css";
 
-createRoot(document.getElementById("root")!).render(<App />);
+// Redirect to static HTML site
+window.location.href = "/public/index.html";
+
+// Minimal React root to prevent errors
+createRoot(document.getElementById("root")!).render(<div>Redirecting...</div>);
