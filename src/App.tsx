@@ -1,20 +1,23 @@
-import { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import FAQs from "./pages/FAQs";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
 
 function App() {
-  useEffect(() => {
-    // Redirect to your static HTML files
-    // Since you have index.html, about.html, etc. at the root,
-    // you can access them directly by changing the URL
-    window.location.href = "/index.html";
-  }, []);
-
   return (
-    <div style={{ padding: "2rem", textAlign: "center" }}>
-      <p>Redirecting to your website...</p>
-      <p>
-        <a href="/index.html">Click here if not redirected</a>
-      </p>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/faqs" element={<FAQs />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
+      </Routes>
+    </Router>
   );
 }
 
