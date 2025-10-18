@@ -689,9 +689,7 @@ footer.bg-dark li,
   opacity: 0;
 }
 .background-image-holder img {
-  display: block;
-  width: 100%;
-  height: auto;
+  display: none;
 }
 
 .background-multiply .background-image-holder {
@@ -2209,6 +2207,15 @@ button[type="submit"] .form-loading {
 }
 .accordion-2 .content p {
   padding: 16px 0;
+}
+.accordion-2 .content {
+  opacity: 0;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+}
+.accordion-2 .active .content {
+  opacity: 1;
 }
 .accordion-2 .title:hover {
   opacity: 1;
