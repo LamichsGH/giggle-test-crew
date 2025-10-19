@@ -3,6 +3,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import FAQs from './pages/FAQs';
+import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
 import './index.css';
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/faqs" element={<FAQs />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
       </Routes>
     </Router>
   );
