@@ -35,9 +35,9 @@ const Navigation = () => {
           </div>
           <div className="module widget-handle mobile-toggle right visible-sm visible-xs">
             <div className="hamburger-menu">
-              <span></span>
-              <span></span>
-              <span></span>
+              <span style={{display: 'block', width: '22px', height: '3px', backgroundColor: '#333', marginBottom: '4px', borderRadius: '2px'}}></span>
+              <span style={{display: 'block', width: '22px', height: '3px', backgroundColor: '#333', marginBottom: '4px', borderRadius: '2px'}}></span>
+              <span style={{display: 'block', width: '22px', height: '3px', backgroundColor: '#333', marginBottom: '0px', borderRadius: '2px'}}></span>
             </div>
           </div>
           <div className="module-group right">

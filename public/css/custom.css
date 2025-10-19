@@ -92,77 +92,84 @@ section + section { margin-top: 0 !important; }
   line-height: 1.6 !important;
 }
 
-/* Custom Hamburger Menu Styling */
-.hamburger-menu {
-  display: inline-block;
-  cursor: pointer;
-  padding: 8px 5px;
-  position: relative;
-  width: 32px;
-  height: 32px;
+/* Custom Hamburger Menu Styling - High Specificity */
+.nav-container .nav-bar .mobile-toggle .hamburger-menu {
+  display: inline-block !important;
+  cursor: pointer !important;
+  padding: 8px 5px !important;
+  position: relative !important;
+  width: 32px !important;
+  height: 32px !important;
+  background: none !important;
+  border: none !important;
+  outline: none !important;
 }
 
-.hamburger-menu span {
-  display: block;
-  position: relative;
-  background: #333;
-  width: 22px;
-  height: 2px;
-  margin-bottom: 4px;
-  transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  transform-origin: 4px 0px;
+.nav-container .nav-bar .mobile-toggle .hamburger-menu span {
+  display: block !important;
+  position: relative !important;
+  background: #333 !important;
+  width: 22px !important;
+  height: 3px !important;
+  margin-bottom: 4px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99) !important;
+  transform-origin: 4px 0px !important;
+  border-radius: 2px !important;
 }
 
-.hamburger-menu span:last-child {
-  margin-bottom: 0;
+.nav-container .nav-bar .mobile-toggle .hamburger-menu span:last-child {
+  margin-bottom: 0 !important;
 }
 
-/* Dark background - use light colored lines */
-.nav-container.nav-dark .hamburger-menu span,
-.nav-container .hamburger-menu span {
-  background: #333;
+/* Dark background - use dark colored lines - High Specificity */
+.nav-container.nav-dark .nav-bar .mobile-toggle .hamburger-menu span,
+.nav-container .nav-bar .mobile-toggle .hamburger-menu span {
+  background: #333 !important;
 }
 
-/* Light background - use dark colored lines */
-.nav-container.nav-light .hamburger-menu span {
-  background: #fff;
+/* Light background - use white colored lines */
+.nav-container.nav-light .nav-bar .mobile-toggle .hamburger-menu span {
+  background: #fff !important;
 }
 
-/* Hover effect */
-.hamburger-menu:hover span {
-  background: #666;
+/* Hover effect - High Specificity */
+.nav-container .nav-bar .mobile-toggle .hamburger-menu:hover span {
+  background: #666 !important;
 }
 
-.nav-container.nav-light .hamburger-menu:hover span {
-  background: rgba(255, 255, 255, 0.8);
+.nav-container.nav-light .nav-bar .mobile-toggle .hamburger-menu:hover span {
+  background: rgba(255, 255, 255, 0.8) !important;
 }
 
-/* Animation when active/clicked */
-.hamburger-menu.active span:first-child {
-  transform: rotate(45deg) translate(0px, 0px);
-  background: #666;
+/* Animation when active/clicked - High Specificity */
+.nav-container .nav-bar .mobile-toggle .hamburger-menu.active span:first-child {
+  transform: rotate(45deg) translate(2px, 2px) !important;
+  background: #666 !important;
 }
 
-.hamburger-menu.active span:nth-child(2) {
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
+.nav-container .nav-bar .mobile-toggle .hamburger-menu.active span:nth-child(2) {
+  opacity: 0 !important;
+  transform: rotate(0deg) scale(0.2, 0.2) !important;
 }
 
-.hamburger-menu.active span:last-child {
-  transform: rotate(-45deg) translate(0px, -2px);
-  background: #666;
+.nav-container .nav-bar .mobile-toggle .hamburger-menu.active span:last-child {
+  transform: rotate(-45deg) translate(2px, -2px) !important;
+  background: #666 !important;
 }
 
-/* Mobile menu improvements */
+/* Mobile menu improvements - High Specificity */
 @media (max-width: 767px) {
-  .hamburger-menu {
-    padding: 10px 8px;
+  .nav-container .nav-bar .mobile-toggle .hamburger-menu {
+    padding: 10px 8px !important;
+    width: 36px !important;
+    height: 36px !important;
   }
   
-  .hamburger-menu span {
-    width: 24px;
-    height: 3px;
-    margin-bottom: 5px;
+  .nav-container .nav-bar .mobile-toggle .hamburger-menu span {
+    width: 24px !important;
+    height: 3px !important;
+    margin-bottom: 5px !important;
+    border-radius: 2px !important;
   }
   
   /* Hide menu by default on mobile */
@@ -217,4 +224,22 @@ section + section { margin-top: 0 !important; }
 
 .mobile-toggle {
   z-index: 1001;
+}
+
+/* Debug - Force hamburger menu to be visible */
+.nav-container .nav-bar .mobile-toggle .hamburger-menu span {
+  content: "" !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  box-shadow: none !important;
+  text-indent: 0 !important;
+  font-size: 0 !important;
+  color: transparent !important;
+}
+
+/* Override any potential icon font conflicts */
+.mobile-toggle .hamburger-menu span:before,
+.mobile-toggle .hamburger-menu span:after {
+  display: none !important;
+  content: none !important;
 }
