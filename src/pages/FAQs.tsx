@@ -4,8 +4,29 @@ import Footer from '../components/Footer';
 
 const FAQs = () => {
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.AOS) {
-      window.AOS.init({ duration: 800, once: true, offset: 100 });
+    // Reinitialize all scripts when component mounts
+    if (typeof window !== 'undefined') {
+      // Initialize AOS
+      if (window.AOS) {
+        window.AOS.init({ duration: 800, once: true, offset: 100 });
+      }
+      
+      // Reinitialize any parallax or background image scripts
+      if (window.jQuery) {
+        // Force refresh of background images and parallax
+        window.jQuery(document).ready(() => {
+          // Trigger any background image handlers
+          window.jQuery('.background-image-holder').each(function() {
+            const img = window.jQuery(this).find('.background-image');
+            if (img.length) {
+              const src = img.attr('src');
+              if (src) {
+                window.jQuery(this).css('background-image', 'url(' + src + ')');
+              }
+            }
+          });
+        });
+      }
     }
   }, []);
 
