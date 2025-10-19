@@ -13,17 +13,39 @@ const FAQs = () => {
       
       // Reinitialize any parallax or background image scripts
       if (window.jQuery) {
+        const $ = window.jQuery;
+        
         // Force refresh of background images and parallax
-        window.jQuery(document).ready(() => {
+        $(document).ready(() => {
           // Trigger any background image handlers
-          window.jQuery('.background-image-holder').each(function() {
-            const img = window.jQuery(this).find('.background-image');
+          $('.background-image-holder').each(function() {
+            const img = $(this).find('.background-image');
             if (img.length) {
               const src = img.attr('src');
               if (src) {
-                window.jQuery(this).css('background-image', 'url(' + src + ')');
+                $(this).css('background-image', 'url(' + src + ')');
               }
             }
+          });
+          
+          // Initialize FAQ accordions
+          $('.accordion-2 li .title').off('click').on('click', function(e) {
+            e.preventDefault();
+            
+            const $this = $(this);
+            const $parent = $this.parent('li');
+            const $content = $parent.find('.content');
+            const $accordion = $this.closest('.accordion-2');
+            
+            // If this is a "one-open" accordion, close others
+            if ($accordion.hasClass('one-open')) {
+              $accordion.find('li').not($parent).removeClass('active');
+              $accordion.find('.content').not($content).slideUp(300);
+            }
+            
+            // Toggle current item
+            $parent.toggleClass('active');
+            $content.slideToggle(300);
           });
         });
       }

@@ -9,19 +9,59 @@ const Navigation = () => {
   };
 
   useEffect(() => {
-    // Initialize mobile menu functionality with jQuery when component mounts
-    if (typeof window !== 'undefined' && window.jQuery) {
-      const $ = window.jQuery;
+    // Initialize mobile menu functionality
+    if (typeof window !== 'undefined') {
       
-      // Handle mobile menu toggle with new button
-      $('.custom-hamburger-btn, .mobile-toggle').off('click').on('click', function(e) {
+      const handleMobileToggle = (e) => {
         e.preventDefault();
         e.stopPropagation();
-        $('.mobile-toggle').toggleClass('active');
-        $('.custom-hamburger-btn').toggleClass('active');
-        $('.nav-bar').toggleClass('mobile-open');
-        $('.module-group').slideToggle(300);
-      });
+        
+        const navBar = document.querySelector('.nav-bar');
+        const hamburgerBtn = document.querySelector('.custom-hamburger-btn');
+        const moduleGroup = document.querySelector('.module-group');
+        
+        if (navBar && hamburgerBtn && moduleGroup) {
+          // Toggle classes
+          navBar.classList.toggle('mobile-open');
+          hamburgerBtn.classList.toggle('active');
+          
+          // Handle smooth animation
+          if (navBar.classList.contains('mobile-open')) {
+            moduleGroup.style.display = 'block';
+            // Force reflow
+            moduleGroup.offsetHeight;
+            moduleGroup.style.opacity = '1';
+            moduleGroup.style.transform = 'translateY(0)';
+          } else {
+            moduleGroup.style.opacity = '0';
+            moduleGroup.style.transform = 'translateY(-20px)';
+            setTimeout(() => {
+              if (!navBar.classList.contains('mobile-open')) {
+                moduleGroup.style.display = 'none';
+              }
+            }, 300);
+          }
+        }
+      };
+      
+      // Add event listener to hamburger button
+      const hamburgerBtn = document.querySelector('.custom-hamburger-btn');
+      if (hamburgerBtn) {
+        hamburgerBtn.addEventListener('click', handleMobileToggle);
+      }
+      
+      // Fallback with jQuery if available
+      if (window.jQuery) {
+        const $ = window.jQuery;
+        $('.custom-hamburger-btn').off('click').on('click', handleMobileToggle);
+      }
+      
+      // Cleanup
+      return () => {
+        if (hamburgerBtn) {
+          hamburgerBtn.removeEventListener('click', handleMobileToggle);
+        }
+      };
     }
   }, []);
 

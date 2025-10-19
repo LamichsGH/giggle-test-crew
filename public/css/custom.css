@@ -175,11 +175,16 @@ section + section { margin-top: 0 !important; }
   /* Hide menu by default on mobile */
   .nav-bar .module-group {
     display: none;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease-in-out;
   }
   
-  /* Show menu when toggled */
+  /* Show menu when toggled with smooth animation */
   .nav-bar.mobile-open .module-group {
     display: block !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
     width: 100%;
     position: absolute;
     top: 100%;
@@ -187,6 +192,19 @@ section + section { margin-top: 0 !important; }
     background: rgba(255, 255, 255, 0.98);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    animation: slideDown 0.3s ease-out;
+  }
+  
+  /* Keyframe animation for smooth dropdown */
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   
   .nav-bar.mobile-open .module-group .menu {
@@ -246,9 +264,10 @@ section + section { margin-top: 0 !important; }
   height: 3px !important;
   background-color: #333 !important;
   margin: 2px 0 !important;
-  transition: 0.3s !important;
+  transition: all 0.3s ease-in-out !important;
   display: block !important;
   border-radius: 2px !important;
+  transform-origin: center !important;
 }
 
 /* Screen reader only text */
@@ -340,4 +359,17 @@ section + section { margin-top: 0 !important; }
 /* If hamburger lines are present, hide the fallback */
 .custom-hamburger-btn:not(:empty)::before {
   display: none !important;
+}
+
+/* Hamburger to X animation when active */
+.custom-hamburger-btn.active .hamburger-line:first-child {
+  transform: rotate(45deg) translate(5px, 5px) !important;
+}
+
+.custom-hamburger-btn.active .hamburger-line:nth-child(2) {
+  opacity: 0 !important;
+}
+
+.custom-hamburger-btn.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px) !important;
 }
