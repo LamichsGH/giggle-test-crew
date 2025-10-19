@@ -355,15 +355,144 @@ section + section { margin-top: 0 !important; }
   display: none !important;
 }
 
-/* Hamburger to X animation when active */
-.custom-hamburger-btn.active .hamburger-line:first-child {
+/* ===== MOBILE HAMBURGER MENU - SYSTEMATIC APPROACH ===== */
+
+/* 1. HAMBURGER BUTTON - Works on all devices */
+.custom-hamburger-btn {
+  background: transparent !important;
+  border: none !important;
+  padding: 12px !important;
+  cursor: pointer !important;
+  width: 44px !important;
+  height: 44px !important;
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 4px !important;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  outline: none !important;
+  border-radius: 4px !important;
+}
+
+/* 2. HAMBURGER LINES - Visible on all devices */
+.hamburger-line {
+  width: 24px !important;
+  height: 2px !important;
+  background-color: #333 !important;
+  transition: all 0.3s ease !important;
+  display: block !important;
+  border-radius: 1px !important;
+  transform-origin: center !important;
+}
+
+/* 3. ACTIVE STATE - X transformation */
+.custom-hamburger-btn.active .hamburger-line:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px) !important;
 }
 
 .custom-hamburger-btn.active .hamburger-line:nth-child(2) {
   opacity: 0 !important;
+  transform: scale(0) !important;
 }
 
 .custom-hamburger-btn.active .hamburger-line:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -6px) !important;
+  transform: rotate(-45deg) translate(5px, -5px) !important;
+}
+
+/* 4. MOBILE MENU DROPDOWN - React state controlled */
+.mobile-menu-open {
+  display: block !important;
+}
+
+/* 5. RESPONSIVE MOBILE STYLING */
+@media (max-width: 767px) {
+  /* Show hamburger button */
+  .custom-hamburger-btn {
+    display: flex !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px) !important;
+  }
+  
+  /* Hide desktop menu by default */
+  .nav-bar .module-group {
+    display: none !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(20px) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+    border-radius: 0 0 12px 12px !important;
+    z-index: 9999 !important;
+    animation: slideInDown 0.3s ease-out !important;
+  }
+  
+  /* Show mobile menu when open */
+  .nav-bar .mobile-menu-open {
+    display: block !important;
+  }
+  
+  /* Style mobile menu items */
+  .mobile-menu-open .menu {
+    flex-direction: column !important;
+    padding: 20px !important;
+    margin: 0 !important;
+  }
+  
+  .mobile-menu-open .menu li {
+    margin: 0 !important;
+    padding: 12px 0 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    text-align: center !important;
+  }
+  
+  .mobile-menu-open .menu li:last-child {
+    border-bottom: none !important;
+  }
+  
+  .mobile-menu-open .menu li a {
+    color: #333 !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    padding: 8px 16px !important;
+    border-radius: 6px !important;
+    transition: all 0.2s ease !important;
+  }
+  
+  .mobile-menu-open .menu li a:hover,
+  .mobile-menu-open .menu li a:active {
+    background: rgba(0, 0, 0, 0.05) !important;
+    color: #000 !important;
+  }
+}
+
+/* 6. ANIMATIONS */
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 7. DESKTOP - Hide mobile elements */
+@media (min-width: 768px) {
+  .custom-hamburger-btn {
+    display: none !important;
+  }
+  
+  .nav-bar .module-group {
+    display: block !important;
+  }
 }
