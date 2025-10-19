@@ -14,17 +14,15 @@ const Terms = () => {
       <Navigation />
       
       <div className="main-container">
-        <section className="fullscreen image-bg" data-aos="fade-up">
+        <section className="fullscreen image-bg">
           <div className="background-image-holder">
             <img alt="image" className="background-image" src="/terms.jpg" />
           </div>
           <div className="container v-align-transform">
             <div className="row">
-              <div className="col-sm-12 text-center" data-aos="fade-up">
-                <img alt="Terms" src="/terms.png" data-aos="fade-up" data-aos-delay="200" />
-                <h1 className="large bold uppercase mb40 mb-xs-16" data-aos="fade-up" data-aos-delay="300">
-                  Site Terms
-                </h1>
+              <div className="col-sm-12 text-center">
+                <img alt="Pic" src="/terms.png" />
+                <h5 className="large bold mb40 mb-xs-16">   </h5>
               </div>
             </div>
           </div>
@@ -33,26 +31,78 @@ const Terms = () => {
         <section className="bg-primary" data-aos="fade-up">
           <div className="container">
             <div className="row">
-              <div className="col-sm-10 col-sm-offset-1 text-left">
-                <h2 className="large bold uppercase mb40 mb-xs-16" data-aos="fade-up" data-aos-delay="100">Terms of Use</h2>
-                <p className="lead">
-                  Welcome to GLO-BALL's website. By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement.
-                </p>
-                
-                <h3 className="bold uppercase mb20 mb-xs-16" data-aos="fade-up" data-aos-delay="200">Use License</h3>
-                <p className="lead">
-                  Permission is granted to temporarily download one copy of the materials on GLO-BALL's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title.
-                </p>
-                
-                <h3 className="bold uppercase mb20 mb-xs-16" data-aos="fade-up" data-aos-delay="300">Disclaimer</h3>
-                <p className="lead">
-                  The materials on GLO-BALL's website are provided on an 'as is' basis. GLO-BALL makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
-                </p>
-                
-                <h3 className="bold uppercase mb20 mb-xs-16" data-aos="fade-up" data-aos-delay="400">Contact Information</h3>
-                <p className="lead">
-                  If you have any questions about these Terms, please contact us at <a href="mailto:enquiries@globall.uk">enquiries@globall.uk</a>
-                </p>
+              <div className="col-sm-10 col-sm-offset-1 text-center">
+                <div className="post-title">
+                  <h1 className="large bold mb40 mb-xs-16">Site Terms</h1>
+                </div>
+                <div className="col-sm-10 col-sm-offset-1 text-left">
+                  <p className="lead">
+                    <h3>1. The Terms</h3>
+                    <li>These terms and conditions ("Terms") govern your use of this website ("Site") and your relationship with Globall ("we", "us", "Globall").</li>
+                    <li>Please read these Terms carefully as they affect your rights and liabilities under the law. If you do not agree to these Terms, please do not use this Site.</li>
+                    <li>These Terms apply to your use of the Site and relationship with Privé generally, whether you engage for the provision of other services or not. If you purchase services from us then separate terms and conditions of service will apply.</li>
+                    <li>Please also see our Privacy and Data Protection Policy for information about how we collect and use your personal data.</li>
+                    <li>We may update these Terms from time to time for legal or regulatory reasons or to allow the proper operation of this Site.</li>
+                    <li>The changes will apply to the use of this Site after we have given notice. If you do not wish to accept the new Terms you should not continue to use this Site and its associated services. If you continue to use this Site after the date on which the change comes into effect, your use of this Site indicates your agreement to be bound by the new Terms.</li>
+                    
+                    <p></p>
+                    <h3>2. Use of this Site</h3>
+                    <li>This Site is provided to you for your personal use subject to these Terms and Conditions. By using this Site you agree to be bound by these Terms.</li>
+                    <li>You are responsible for ensuring that all persons who access our site through your internet connection are aware of these Terms and that they comply with them.</li>
+                    
+                    <p></p>
+                    <h3>3. Registering with the Site</h3>
+                    <li>You may be required to register to enable you to access certain sections of the Site or purchase services from us. When you register to use the Site we may ask for some of your personal information. Any personal information you provide us with will be handled in accordance with our Privacy and Data Protection Policy.</li>
+                    <li>If you register to use the Site you will be asked to create a password. In order to prevent fraud, you must keep this password confidential and must not disclose it or share it with anyone. If you know or suspect that someone else knows your password you should notify us immediately.</li>
+                    <li>If we have reason to believe that there is likely to be a breach of security or misuse of the Site through your account or the use of your password, we may require you to change your password or we may suspend your account.</li>
+                    
+                    <p></p>
+                    <h3>4. Intellectual property</h3>
+                    <li>The content of this Site is protected by copyright, trade marks, database right and other intellectual property rights. You may retrieve and display the content of this Site on a computer screen, store such content in electronic form on disk (but not any server or other storage device connected to a network) or print one copy of such content for your own personal, non-commercial use, provided you keep intact all and any copyright and proprietary notices. You may not otherwise reproduce, modify, copy or distribute or use for commercial purposes any of the materials or content on this Site without our written permission.</li>
+                    <li>Some of the services we provide on this Site may provide content that is protected by copyright, trade marks, database rights and other intellectual property rights owned by third parties. Such intellectual property rights are licensed to us and if you reproduce, modify, copy or distribute any of this content you may be infringing these third party intellectual property rights.</li>
+                    <li>We do not warrant as to the accuracy of any content that is supplied by a third party and which we can provide to you under licence.</li>
+                    
+                    <p></p>
+                    <h3>5. Availability of this Site</h3>
+                    <li>Although we aim to offer you the best service possible, we make no promise that the services at this Site will meet your requirements. We cannot guarantee that the services will be fault-free. If a fault occurs with this Site you should report it to us and we will attempt to correct the fault as soon as we reasonably can.</li>
+                    <li>Your access to this Site may be occasionally restricted to allow for repairs, maintenance or the introduction of new facilities or services. We will attempt to restore the service as soon as we reasonably can. Access to the Site may be restricted whether or not you have registered with us.</li>
+                    
+                    <p></p>
+                    <h3>6. Our liability</h3>
+                    <li>This Site may provide content from other internet sites or resources and while we try to ensure that material included on this Site is correct, reputable and of high quality, we do not make any warranties or guarantees in relation to that content. If we are informed of any inaccuracies in the material on the Site we will attempt to correct the inaccuracies as soon as we reasonably can.</li>
+                    <li>If we are in breach of these Terms, we will only be responsible for any losses that you suffer as a result to the extent that they are a foreseeable consequence to both of us at the time you use this Site. Our liability shall not in any event include business losses such as lost data, lost profits or business interruption.</li>
+                    <li>Commentary and other materials posted on this Site are not intended to amount to advice on which reliance should be placed. We shall not be liable for any losses that may be incurred by you or any visitor to this Site or by anyone who may be informed of any of its contents as a result of any reliance placed on such materials.</li>
+                    <li>This clause 6 shall not limit or affect our liability resulting from any services or products sold through this Site being found to be unsafe or if something we do negligently causes death or personal injury.</li>
+                    
+                    <p></p>
+                    <h3>7. Viruses, hacking and other offences</h3>
+                    <li>You must not misuse our Site by knowingly introducing viruses, trojans, worms, logic bombs or other material which is malicious or technologically harmful. You must not attempt to gain unauthorised access to our Site, the server on which our site is stored or any server, computer or database connected to our site. You must not attack our Site via a denial-of-service attack or a distributed denial-of service attack.</li>
+                    <li>By breaching this provision, you would commit a criminal offence under the Computer Misuse Act 1990. We will report any such breach to the relevant law enforcement authorities and we will co-operate with those authorities by disclosing your identity to them. In the event of such a breach, your right to use our Site will cease immediately.</li>
+                    <li>We will not be liable for any loss or damage caused by a distributed denial-of-service attack, viruses or other technologically harmful material that may infect your computer equipment, computer programs, data or other proprietary material due to your use of our Site or to your downloading of any material posted on it, or on any website linked to it.</li>
+                    
+                    <p></p>
+                    <h3>8. Third Party Sites</h3>
+                    As a convenience to you, this Site includes links to other web sites or material which are beyond its control. We are not responsible for content on any site outside this Site.
+                    
+                    <h3>9. Advertising and Sponsorship</h3>
+                    Part of this Site may contain advertising and sponsorship. Advertisers and sponsors are responsible for ensuring that material submitted for inclusion on this Site complies with relevant laws and codes. We will not be responsible to you for any error or inaccuracy in advertising and sponsorship material.
+                    
+                    <p></p>
+                    <h3>10. International Use</h3>
+                    <li>We make no promise that materials on this Site are appropriate or available for use in locations outside the United Kingdom, and accessing this Site from territories where its contents are illegal or unlawful is prohibited. If you choose to access this site from locations outside the United Kingdom, you do so at your own initiative and are responsible for compliance with local laws.</li>
+                    <li>You shall comply with all foreign and local laws and regulations which apply to your use of our Site or our simple randomisation service in whatever country you are physically located, including without limitation, consumer law, export control laws and regulations.</li>
+                    
+                    <p></p>
+                    <h3>11. General</h3>
+                    <li>If you feel that any materials appearing on our Site are offensive, objectionable or potentially defamatory please contact us by way of our contact page providing full details of the nature of your complaint and the materials to which the complaint relates.</li>
+                    <li>You may not transfer any of your rights under these Terms to any other person. We may transfer our rights under these Terms to another business where we reasonably believe your rights will not be affected.</li>
+                    <li>If you breach these Terms and we choose to ignore this, we will still be entitled to use its rights and remedies at a later date or in any other situation where you breach the Terms and Conditions.</li>
+                    <li>We shall not be responsible for any breach of these Terms caused by circumstances beyond our reasonable control.</li>
+                    <li>These Terms will be subject to the laws of England and Wales. We will try to solve any disagreements quickly and efficiently. If you are not happy with the way we deal with any disagreement and you want to take court proceedings, you must do so within the United Kingdom.</li>
+                    
+                    <p>If you have any queries please contact us at <a href="mailto:info@globall.uk">info@globall.uk</a>.</p>
+                  </p>
+                </div>
               </div>
             </div>
           </div>

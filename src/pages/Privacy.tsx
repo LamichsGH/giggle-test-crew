@@ -14,17 +14,15 @@ const Privacy = () => {
       <Navigation />
       
       <div className="main-container">
-        <section className="fullscreen image-bg" data-aos="fade-up">
+        <section className="fullscreen image-bg">
           <div className="background-image-holder">
             <img alt="image" className="background-image" src="/privacy.jpg" />
           </div>
           <div className="container v-align-transform">
             <div className="row">
-              <div className="col-sm-12 text-center" data-aos="fade-up">
-                <img alt="Privacy" src="/privacy.png" data-aos="fade-up" data-aos-delay="200" />
-                <h1 className="large bold uppercase mb40 mb-xs-16" data-aos="fade-up" data-aos-delay="300">
-                  Privacy Policy
-                </h1>
+              <div className="col-sm-12 text-center">
+                <img alt="Pic" src="/privacy.png" />
+                <h5 className="large bold mb40 mb-xs-16">   </h5>
               </div>
             </div>
           </div>
@@ -33,31 +31,65 @@ const Privacy = () => {
         <section className="bg-primary" data-aos="fade-up">
           <div className="container">
             <div className="row">
-              <div className="col-sm-10 col-sm-offset-1 text-left">
-                <h2 className="large bold uppercase mb40 mb-xs-16" data-aos="fade-up" data-aos-delay="100">Our Privacy Policy</h2>
-                <p className="lead">
-                  GLO-BALL is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website.
-                </p>
-                
-                <h3 className="bold uppercase mb20 mb-xs-16" data-aos="fade-up" data-aos-delay="200">Information We Collect</h3>
-                <p className="lead">
-                  We may collect information you provide directly to us, such as when you contact us via email or through our contact forms. This may include your name, email address, and any message content you choose to share.
-                </p>
-                
-                <h3 className="bold uppercase mb20 mb-xs-16" data-aos="fade-up" data-aos-delay="300">How We Use Information</h3>
-                <p className="lead">
-                  We use the information we collect to respond to your inquiries, provide information about our programs, and communicate with you about GLO-BALL's mission and activities.
-                </p>
-                
-                <h3 className="bold uppercase mb20 mb-xs-16" data-aos="fade-up" data-aos-delay="400">Information Sharing</h3>
-                <p className="lead">
-                  We do not sell, trade, or otherwise transfer your personal information to outside parties without your consent, except as described in this policy or as required by law.
-                </p>
-                
-                <h3 className="bold uppercase mb20 mb-xs-16" data-aos="fade-up" data-aos-delay="500">Contact Us</h3>
-                <p className="lead">
-                  If you have questions about this Privacy Policy, please contact us at <a href="mailto:enquiries@globall.uk">enquiries@globall.uk</a>
-                </p>
+              <div className="col-sm-10 col-sm-offset-1 text-center">
+                <div className="post-title">
+                  <h1 className="large bold mb40 mb-xs-16">Privacy</h1>
+                </div>
+                <div className="col-sm-10 col-sm-offset-1 text-left">
+                  <p className="lead">
+                    Globall understands that your privacy is important to you and that you care about how your personal data is used. We respect and value the privacy of everyone who visits this website, www.globall.uk ("our Site") and as described in Parts 5 and 6, below, we do not collect personal data about you unless you contact us or register. Any personal data we do collect will only be used as permitted by law.
+                  </p>
+
+                  <p>Please read this Privacy Policy carefully and ensure that you understand it. Your acceptance of this Privacy Policy is deemed to occur upon your first use of our Site. If you do not accept and agree with this Privacy Policy, you must stop using our Site immediately.</p>
+
+                  <h3>1. Information About us</h3>
+                  <p>Our Site is operated by Globall, a company, registered in England</p>
+                  <li>Email address: <a href="mailto:privacy@globall.uk">privacy@globall.uk</a>.</li>
+
+                  <h3>2. What Does This Policy Cover?</h3>
+                  <p>This Privacy Policy applies only to your use of our Site. Our Site may contain links to other websites. Please note that we have no control over how your data is collected, stored, or used by other websites and we advise you to check the privacy policies of any such websites before providing any data to them.</p>
+
+                  <h3>3. What is Personal Data?</h3>
+                  <p>Personal data is defined by the General Data Protection Regulation (EU Regulation 2016/679) (the "GDPR") as 'any information relating to an identifiable person who can be directly or indirectly identified in particular by reference to an identifier'. Personal data is, in simpler terms, any information about you that enables you to be identified. Personal data covers obvious information such as your name and contact details, but it also covers less obvious information such as identification numbers, electronic location data, and other online identifiers.</p>
+
+                  <h3>4. What Are My Rights?</h3>
+                  <p>Under the GDPR, you have the following rights, which we will always work to uphold:</p>
+                  <li>a) The right to be informed about our collection and use of your personal data. This Privacy Policy should tell you everything you need to know, but you can always contact us to find out more or to ask any questions using the details in Part 10.</li>
+                  <li>b) The right to access the personal data we hold about you. Part 9 will tell you how to do this.</li>
+                  <li>c) The right to have your personal data rectified if any of your personal data held by us is inaccurate or incomplete. Please contact us using the details in Part 10 to find out more.</li>
+                  <li>d) The right to be forgotten, i.e. the right to ask us to delete or otherwise dispose of any of your personal data that we have. Please contact us using the details in Part 10 to find out more.</li>
+                  <li>e) The right to restrict (i.e. prevent) the processing of your personal data.</li>
+                  <li>f) The right to object to us using your personal data for a particular purpose or purposes.</li>
+                  <li>g) The right to data portability. This means that, if you have provided personal data to us directly, we am using it with your consent or for the performance of a contract, and that data is processed using automated means, you can ask us for a copy of that personal data to re-use with another service or business in many cases.</li>
+                  <li>h) Rights relating to automated decision-making and profiling. we do not use your personal data in this way.</li>
+                  <p>For more information about our use of your personal data or exercising your rights as outlined above, please contact us using the details provided in Part 10. Further information about your rights can also be obtained from the Information Commissioner's Office or your local Citizens Advice Bureau. If you have any cause for complaint about our use of your personal data, you have the right to lodge a complaint with the Information Commissioner's Office.</p>
+
+                  <h3>5. What Personal Data Do You Collect?</h3>
+                  <p>Subject to the following, we do not collect any personal data from you. we do not place cookies on your computer or device, nor do we use any other means of data collection. If you send us an email, we may collect your name, your email address, and any other information which you choose to give us.</p>
+
+                  <h3>6. How Do You Use My Personal Data?</h3>
+                  <p>If we do collect any personal data through registration, it will be processed and stored securely, for no longer than is necessary in light of the reason(s) for which it was first collected. we will comply with our obligations and safeguard your rights under the GDPR at all times. For more details on security see Part 7, below. As stated above, we do not generally collect any personal data. If you contact us and we obtain your personal details from your email, we may use them to respond to your email. Any and all emails containing your personal data will be deleted no later than three months after the subject matter of your email has been resolved. You have the right to withdraw your consent to us using your personal data at any time, and to request that we delete it. We will not share any of your data with any third parties for any purposes other than storage on an email server.</p>
+
+                  <h3>7. How and Where Do You Store My Data?</h3>
+                  <p>We may store some or all of your personal data in countries that are not part of the European Economic Area (the "EEA" consists of all EU member states, plus Norway, Iceland, and Liechtenstein). These are known as "third countries" and may not have data protection laws that are as strong as those in the UK and/or the EEA. This means that we will take additional steps in order to ensure that your personal data is treated just as safely and securely as it would be within the UK and under the GDPR as follows. Where we transfer your data to a third party based in the US, this may be protected if they are part of the EU-US Privacy Shield. This requires that third party to provide data protection to standards similar to those in Europe. More information is available from the European Commission. Please contact us using the details below in Part 10 for further information about the particular data protection mechanism used by us when transferring your personal data to a third country. Personal data security is essential to us, and to protect personal data, we take the following measures:</p>
+                  <li>We only hold your email address and work post iced which are stored on the Mailchimp server. This information is not stored anywhere else either physically or virtually.</li>
+
+                  <h3>8. Do You Share My Personal Data?</h3>
+                  <p>We contract with the following third party for data storage purposes of registrants of our service; Mailchimp</p>
+                  <li>Mailchimp Inc, Located at; Ponce City Market, Atlanta, Georgia</li>
+
+                  <p>If any of your personal data is transferred to a third party, as described above, we will take steps to ensure that your personal data is handled safely, securely, and in accordance with your rights, our obligations, and the third party's obligations under the law, as described above in Part 7. If any personal data is transferred outside of the EEA, we will take suitable steps in order to ensure that your personal data is treated just as safely and securely as it would be within the UK and under the GDPR, as explained above in Part 7. In some limited circumstances, we may be legally required to share certain personal data, which might include yours, if we are involved in legal proceedings or complying with legal obligations, a court order, or the instructions of a government authority.</p>
+
+                  <h3>9. How Can I Access My Personal Data?</h3>
+                  <p>If you want to know what personal data we have about you, you can ask us for details of that personal data and for a copy of it (where any such personal data is held). This is known as a "subject access request". All subject access requests should be made in writing and sent to the email or postal addresses shown in Part 10. To make this as easy as possible for you, a Subject Access Request Form is available for you to use. You do not have to use this form, but it is the easiest way to tell us everything we need to know to respond to your request as quickly as possible. There is not normally any charge for a subject access request. If your request is 'manifestly unfounded or excessive' (for example, if you make repetitive requests) a fee may be charged to cover our administrative costs in responding. We will respond to your subject access request within one month of receiving it. Normally, we aim to provide a complete response, including a copy of your personal data within that time. In some cases, however, particularly if your request is more complex, more time may be required up to a maximum of three months from the date we receive your request. You will be kept fully informed of our progress.</p>
+
+                  <h3>10. How Do I Contact You?</h3>
+                  <p>To contact us about anything to do with your personal data and data protection, including to make a subject access request, please use the following details:</p>
+                  <li>Email address: <a href="mailto:privacy@globall.uk">privacy@globall.uk</a>.</li>
+
+                  <h3>11. Changes to this Privacy Policy</h3>
+                  <p>We may change this Privacy Notice from time to time. This may be necessary, for example, if the law changes, or if we change our business in a way that affects personal data protection. Any changes will be immediately posted on our Site and you will be deemed to have accepted the terms of the Privacy Policy on your first use of our Site following the alterations. We recommend that you check this page regularly to keep up-to-date.</p>
+                </div>
               </div>
             </div>
           </div>
