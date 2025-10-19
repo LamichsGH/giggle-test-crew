@@ -1,6 +1,29 @@
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 const Navigation = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  useEffect(() => {
+    // Initialize mobile menu functionality with jQuery when component mounts
+    if (typeof window !== 'undefined' && window.jQuery) {
+      const $ = window.jQuery;
+      
+      // Handle mobile menu toggle
+      $('.mobile-toggle').off('click').on('click', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $('.hamburger-menu').toggleClass('active');
+        $('.nav-bar').toggleClass('mobile-open');
+        $('.module-group').slideToggle(300);
+      });
+    }
+  }, []);
+
   return (
     <div className="nav-container">
       <nav>
@@ -11,7 +34,11 @@ const Navigation = () => {
             </Link>
           </div>
           <div className="module widget-handle mobile-toggle right visible-sm visible-xs">
-            <i className="ti-menu"></i>
+            <div className="hamburger-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
           <div className="module-group right">
             <div className="module left">
