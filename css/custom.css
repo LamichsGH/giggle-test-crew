@@ -61,31 +61,33 @@ section + section { margin-top: 0 !important; }
   content: "+";
 }
 
-/* Remove border line above GET INVOLVED section */
-.accordion-2 li:last-child .title {
-  border-top: none !important;
-  margin-top: 20px !important;
-  padding-top: 20px !important;
-}
-
-/* Make GET INVOLVED section more visually appealing */
-.accordion-2 li:last-child {
+/* Make ALL FAQ sections more visually appealing */
+.accordion-2 li {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
   padding: 20px;
-  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
-.accordion-2 li:last-child .title {
+.accordion-2 li .title {
   border-bottom: none !important;
+  border-top: none !important;
   padding-bottom: 10px !important;
+  margin: 0 !important;
 }
 
-.accordion-2 li:last-child .title h4 {
+.accordion-2 li .title h4 {
   color: #fff !important;
-  font-size: 24px !important;
+  font-size: 20px !important;
+  margin-bottom: 0 !important;
 }
 
-.accordion-2 li:last-child .content {
+.accordion-2 li .content {
   padding-top: 10px !important;
+  padding-bottom: 0 !important;
+}
+
+.accordion-2 li .content h5 {
+  color: rgba(255, 255, 255, 0.9) !important;
+  line-height: 1.6 !important;
 }
