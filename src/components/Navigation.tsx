@@ -13,11 +13,12 @@ const Navigation = () => {
     if (typeof window !== 'undefined' && window.jQuery) {
       const $ = window.jQuery;
       
-      // Handle mobile menu toggle
-      $('.mobile-toggle').off('click').on('click', function(e) {
+      // Handle mobile menu toggle with new button
+      $('.custom-hamburger-btn, .mobile-toggle').off('click').on('click', function(e) {
         e.preventDefault();
-        $(this).toggleClass('active');
-        $('.hamburger-menu').toggleClass('active');
+        e.stopPropagation();
+        $('.mobile-toggle').toggleClass('active');
+        $('.custom-hamburger-btn').toggleClass('active');
         $('.nav-bar').toggleClass('mobile-open');
         $('.module-group').slideToggle(300);
       });
@@ -34,11 +35,12 @@ const Navigation = () => {
             </Link>
           </div>
           <div className="module widget-handle mobile-toggle right visible-sm visible-xs">
-            <div className="hamburger-menu">
-              <span style={{display: 'block', width: '22px', height: '3px', backgroundColor: '#333', marginBottom: '4px', borderRadius: '2px'}}></span>
-              <span style={{display: 'block', width: '22px', height: '3px', backgroundColor: '#333', marginBottom: '4px', borderRadius: '2px'}}></span>
-              <span style={{display: 'block', width: '22px', height: '3px', backgroundColor: '#333', marginBottom: '0px', borderRadius: '2px'}}></span>
-            </div>
+            <button className="custom-hamburger-btn" type="button">
+              <span className="hamburger-line"></span>
+              <span className="hamburger-line"></span>
+              <span className="hamburger-line"></span>
+              <span className="sr-only">Toggle navigation</span>
+            </button>
           </div>
           <div className="module-group right">
             <div className="module left">

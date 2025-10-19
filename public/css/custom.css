@@ -226,20 +226,92 @@ section + section { margin-top: 0 !important; }
   z-index: 1001;
 }
 
-/* Debug - Force hamburger menu to be visible */
-.nav-container .nav-bar .mobile-toggle .hamburger-menu span {
-  content: "" !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  box-shadow: none !important;
-  text-indent: 0 !important;
-  font-size: 0 !important;
-  color: transparent !important;
+/* BULLETPROOF HAMBURGER MENU - NEW APPROACH */
+.custom-hamburger-btn {
+  background: transparent !important;
+  border: none !important;
+  padding: 10px !important;
+  cursor: pointer !important;
+  width: 40px !important;
+  height: 40px !important;
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
-/* Override any potential icon font conflicts */
-.mobile-toggle .hamburger-menu span:before,
-.mobile-toggle .hamburger-menu span:after {
+.hamburger-line {
+  width: 25px !important;
+  height: 3px !important;
+  background-color: #333 !important;
+  margin: 2px 0 !important;
+  transition: 0.3s !important;
+  display: block !important;
+  border-radius: 2px !important;
+}
+
+/* Screen reader only text */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Force visibility on mobile devices */
+@media (max-width: 767px) {
+  .custom-hamburger-btn {
+    display: flex !important;
+  }
+  
+  .hamburger-line {
+    background-color: #000 !important;
+    width: 25px !important;
+    height: 3px !important;
+  }
+}
+
+/* Remove any conflicting styles */
+.mobile-toggle .custom-hamburger-btn * {
+  box-sizing: border-box !important;
+}
+
+/* Override Bootstrap/theme button styles */
+.custom-hamburger-btn:focus,
+.custom-hamburger-btn:active,
+.custom-hamburger-btn:hover {
+  background: transparent !important;
+  border: none !important;
+  outline: 2px solid #333 !important;
+  outline-offset: 2px !important;
+}
+
+/* ULTIMATE FALLBACK - CSS-only hamburger if spans don't work */
+.custom-hamburger-btn::before {
+  content: "☰" !important;
+  font-size: 24px !important;
+  color: #333 !important;
+  display: block !important;
+  line-height: 1 !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: -1 !important;
+}
+
+/* Hide the CSS fallback if hamburger lines are working */
+.custom-hamburger-btn .hamburger-line:first-child ~ .hamburger-line ~ .hamburger-line {
+  z-index: 1 !important;
+}
+
+/* If hamburger lines are present, hide the fallback */
+.custom-hamburger-btn:not(:empty)::before {
   display: none !important;
-  content: none !important;
 }
