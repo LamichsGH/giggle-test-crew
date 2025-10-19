@@ -9,59 +9,36 @@ const Navigation = () => {
   };
 
   useEffect(() => {
-    // Initialize mobile menu functionality
-    if (typeof window !== 'undefined') {
+    // Simple, reliable mobile menu functionality
+    if (typeof window !== 'undefined' && window.jQuery) {
+      const $ = window.jQuery;
       
-      const handleMobileToggle = (e) => {
-        e.preventDefault();
-        e.stopPropagation();
+      // Wait for DOM to be ready
+      $(document).ready(() => {
+        // Remove any existing handlers
+        $('.custom-hamburger-btn, .mobile-toggle').off('click.mobilemenu');
         
-        const navBar = document.querySelector('.nav-bar');
-        const hamburgerBtn = document.querySelector('.custom-hamburger-btn');
-        const moduleGroup = document.querySelector('.module-group');
-        
-        if (navBar && hamburgerBtn && moduleGroup) {
-          // Toggle classes
-          navBar.classList.toggle('mobile-open');
-          hamburgerBtn.classList.toggle('active');
+        // Add click handler
+        $('.custom-hamburger-btn, .mobile-toggle').on('click.mobilemenu', function(e) {
+          e.preventDefault();
+          console.log('Hamburger clicked!'); // Debug log
           
-          // Handle smooth animation
-          if (navBar.classList.contains('mobile-open')) {
-            moduleGroup.style.display = 'block';
-            // Force reflow
-            moduleGroup.offsetHeight;
-            moduleGroup.style.opacity = '1';
-            moduleGroup.style.transform = 'translateY(0)';
+          const $navBar = $('.nav-bar');
+          const $moduleGroup = $('.module-group');
+          const $hamburger = $('.custom-hamburger-btn');
+          
+          // Toggle classes
+          $navBar.toggleClass('mobile-open');
+          $hamburger.toggleClass('active');
+          
+          // Simple toggle - just show/hide
+          if ($navBar.hasClass('mobile-open')) {
+            $moduleGroup.slideDown(300);
           } else {
-            moduleGroup.style.opacity = '0';
-            moduleGroup.style.transform = 'translateY(-20px)';
-            setTimeout(() => {
-              if (!navBar.classList.contains('mobile-open')) {
-                moduleGroup.style.display = 'none';
-              }
-            }, 300);
+            $moduleGroup.slideUp(300);
           }
-        }
-      };
-      
-      // Add event listener to hamburger button
-      const hamburgerBtn = document.querySelector('.custom-hamburger-btn');
-      if (hamburgerBtn) {
-        hamburgerBtn.addEventListener('click', handleMobileToggle);
-      }
-      
-      // Fallback with jQuery if available
-      if (window.jQuery) {
-        const $ = window.jQuery;
-        $('.custom-hamburger-btn').off('click').on('click', handleMobileToggle);
-      }
-      
-      // Cleanup
-      return () => {
-        if (hamburgerBtn) {
-          hamburgerBtn.removeEventListener('click', handleMobileToggle);
-        }
-      };
+        });
+      });
     }
   }, []);
 
