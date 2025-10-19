@@ -53,124 +53,9 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body class="scroll-assist">
-  <!-- Navigation -->
-  <div class="nav-container">
-    <nav>
-      <div class="nav-bar">
-        <div class="module left">
-          <a href="index.html">
-            <img class="logo logo-dark" alt="Globall" src="/globall.png">
-          </a>
-        </div>
-        <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
-          <i class="ti-menu"></i>
-        </div>
-        <div class="module-group right">
-          <div class="module left">
-            <ul class="menu">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">Mission</a></li>
-              <li><a href="faqs.html">FAQ's</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </div>
-
-  <!-- Main Container -->
-  <div class="main-container">
-    <!-- Hero Section -->
-    <section class="fullscreen image-bg">
-      <div class="background-image-holder">
-        <img alt="Globall" class="background-image" src="/index.jpg">
-      </div>
-      <div class="container v-align-transform">
-        <div class="row">
-          <div class="col-sm-12 text-center" data-aos="fade-up">
-            <img alt="Globall" src="/index.png" data-aos="fade-up" data-aos-delay="200">
-            <h5 class="large bold mb40 mb-xs-16" data-aos="fade-up" data-aos-delay="400">
-              We travel to communities globally where children face extreme poverty, conflict, & social challenges, using football as a tool
-            </h5>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Mission Section -->
-    <section class="image-bg parallax pt240 pb180 pt-xs-80 pb-xs-80" data-aos="fade-up">
-      <div class="background-image-holder">
-        <img alt="Mission" class="background-image" src="/globall1.jpg">
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-10 col-md-offset-1 text-center">
-            <h1 class="large bold uppercase mb50 mb-xs-16" data-aos="fade-up" data-aos-delay="100">MISSION</h1>
-            <p class="lead mb48 mb-xs-32" data-aos="fade-up" data-aos-delay="200">
-              We travel to communities globally where children face extreme poverty, conflict, & social challenges, using football as a tool
-            </p>
-            <a class="btn-lg btn" href="about.html" data-aos="fade-up" data-aos-delay="300">View More</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Donate Section -->
-    <section class="image-bg parallax pt240 pb180 pt-xs-80 pb-xs-80" data-aos="fade-up">
-      <div class="background-image-holder">
-        <img alt="Donate" class="background-image" src="/globall2.jpg">
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-10 col-md-offset-1 text-center">
-            <h1 class="large bold uppercase mb40 mb-xs-16" data-aos="fade-up" data-aos-delay="100">DONATE</h1>
-            <p class="lead mb48 mb-xs-32" data-aos="fade-up" data-aos-delay="200">
-              To find out how to donate to GLO-BALL, contact us today
-            </p>
-            <a class="btn-lg btn" href="contact.html" data-aos="fade-up" data-aos-delay="300">Contact Us</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Follow Us Section -->
-    <section class="image-bg parallax pt240 pb180 pt-xs-80 pb-xs-80" data-aos="fade-up">
-      <div class="background-image-holder">
-        <img alt="Follow" class="background-image" src="/glo1.jpg">
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-10 col-md-offset-1 text-center">
-            <h1 class="large bold uppercase mb40 mb-xs-16" data-aos="fade-up" data-aos-delay="100">Follow Us</h1>
-            <a href="https://www.instagram.com/globalluk/" target="_blank" data-aos="fade-up" data-aos-delay="200">
-              <img class="image-xs" alt="Instagram" src="/insta.png">
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer-2 bg-primary text-center-xs">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
-            <a href="/index.html">
-              <img class="image-xs" alt="Globall" src="/index.png">
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-8 col-md-offset-2 text-center">
-            <ul class="list-inline social-list mb0">
-              <a href="terms.html">SITE TERMS</a> | <a href="privacy.html">PRIVACY</a>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </div>
-
+<body>
+  <div id="root"></div>
+  
   <!-- Scripts -->
   <script src="/js/jquery-3.3.1.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
@@ -181,7 +66,10 @@
   <script src="/js/parallax.js"></script>
   <script src="/js/scripts.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init({duration: 800, once: true, offset: 100});</script>
+  <script>
+    window.AOS = AOS;
+    AOS.init({duration: 800, once: true, offset: 100});
+  </script>
+  <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>
-
