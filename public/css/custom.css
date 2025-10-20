@@ -54,7 +54,7 @@ section + section { margin-top: 0 !important; }
 
 .accordion-2 li .title {
   position: relative !important;
-  padding: 24px 60px 24px 40px !important;
+  padding: 18px 60px 18px 30px !important;
   margin: 0 !important;
   border: none !important;
   background: transparent !important;
@@ -68,7 +68,7 @@ section + section { margin-top: 0 !important; }
 
 .accordion-2 li .title h4 {
   color: rgba(255, 255, 255, 0.9) !important;
-  font-size: 1.2rem !important;
+  font-size: 0.9rem !important;
   font-weight: 400 !important;
   margin: 0 !important;
   letter-spacing: 0.5px !important;
@@ -96,7 +96,7 @@ section + section { margin-top: 0 !important; }
 
 /* Content styling */
 .accordion-2 li .content {
-  padding: 0 40px 30px 40px !important;
+  padding: 0 30px 20px 30px !important;
   margin: 0 !important;
   background: transparent !important;
   display: none !important;
@@ -108,7 +108,7 @@ section + section { margin-top: 0 !important; }
 
 .accordion-2 li .content h5 {
   color: rgba(255, 255, 255, 0.8) !important;
-  font-size: 1rem !important;
+  font-size: 0.85rem !important;
   font-weight: 400 !important;
   line-height: 1.6 !important;
   margin: 0 !important;
