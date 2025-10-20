@@ -593,40 +593,40 @@ section + section { margin-top: 0 !important; }
 
 /* ===== CONSISTENT PAGE FORMATTING ===== */
 
-/* Section headings - back to original size */
+/* Section headings - larger to match red box sizing */
 .large.bold.uppercase {
   font-weight: 800 !important;
-  /* Remove custom font-size to use original theme size */
-  letter-spacing: 0.1em !important;
+  font-size: 4.5rem !important; /* Much larger to match the red box */
+  letter-spacing: 0.15em !important;
 }
 
-/* Section paragraphs - increased by 12% */
+/* Section paragraphs - larger to match red box sizing */
 .lead {
   font-weight: 600 !important;
-  font-size: 1.568rem !important; /* 1.4rem * 1.12 = 1.568rem */
-  line-height: 1.6 !important;
-  letter-spacing: 0.3px !important;
+  font-size: 2.2rem !important; /* Much larger to match the red box */
+  line-height: 1.5 !important;
+  letter-spacing: 0.4px !important;
 }
 
 /* Responsive adjustments for section formatting */
 @media (max-width: 768px) {
   .large.bold.uppercase {
-    /* Use original theme responsive sizes */
-    letter-spacing: 0.08em !important;
+    font-size: 3.5rem !important; /* Scaled down for tablet */
+    letter-spacing: 0.12em !important;
   }
   
   .lead {
-    font-size: 1.4rem !important; /* 1.25rem * 1.12 = 1.4rem */
+    font-size: 1.8rem !important; /* Scaled down for tablet */
   }
 }
 
 @media (max-width: 480px) {
   .large.bold.uppercase {
-    /* Use original theme responsive sizes */
-    letter-spacing: 0.06em !important;
+    font-size: 2.8rem !important; /* Scaled down for mobile */
+    letter-spacing: 0.1em !important;
   }
   
   .lead {
-    font-size: 1.232rem !important; /* 1.1rem * 1.12 = 1.232rem */
+    font-size: 1.5rem !important; /* Scaled down for mobile */
   }
 }
