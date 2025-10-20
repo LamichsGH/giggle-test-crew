@@ -136,7 +136,7 @@ section + section { margin-top: 0 !important; }
   line-height: 1.6 !important;
   color: rgba(255, 255, 255, 1) !important; /* Full opacity white */
   text-align: center !important;
-  margin: -5px auto 0 auto !important; /* Negative margin to tuck it right under */
+  margin: -15px auto 0 auto !important; /* Closer to heading */
   max-width: 800px !important;
   letter-spacing: 0.5px !important; /* Increased spacing */
 }
@@ -156,7 +156,7 @@ section + section { margin-top: 0 !important; }
   .hero-tagline {
     font-size: 1.6rem !important;
     font-weight: 700 !important;
-    margin: 30px auto 0 auto !important;
+    margin: 20px auto 0 auto !important;
     padding: 0 20px !important;
   }
 }
@@ -175,6 +175,6 @@ section + section { margin-top: 0 !important; }
   .hero-tagline {
     font-size: 1.4rem !important;
     font-weight: 700 !important;
-    margin: 25px auto 0 auto !important;
+    margin: 15px auto 0 auto !important;
   }
 }
