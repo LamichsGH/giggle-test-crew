@@ -71,7 +71,7 @@ const FAQs = () => {
                 <ul className="accordion accordion-2 one-open">
                   <li data-aos="fade-up" data-aos-delay="100">
                     <div className="title">
-                      <h4 className="inline-block large bold uppercase mb10 mb-xs-16">What is Globall?</h4>
+                      <h4 className="large bold uppercase mb10 mb-xs-16">What is Globall?</h4>
                     </div>
                     <div className="content">
                       <h5>
@@ -81,7 +81,7 @@ const FAQs = () => {
                   </li>
                   <li data-aos="fade-up" data-aos-delay="200">
                     <div className="title">
-                      <h4 className="inline-block large bold uppercase mb10 mb-xs-16">How We Help?</h4>
+                      <h4 className="large bold uppercase mb10 mb-xs-16">How We Help?</h4>
                     </div>
                     <div className="content">
                       <h5>
@@ -91,7 +91,7 @@ const FAQs = () => {
                   </li>
                   <li data-aos="fade-up" data-aos-delay="300">
                     <div className="title">
-                      <h4 className="inline-block large bold uppercase mb10 mb-xs-16">Sponsor Us?</h4>
+                      <h4 className="large bold uppercase mb10 mb-xs-16">Sponsor Us?</h4>
                     </div>
                     <div className="content">
                       <h5>
@@ -101,7 +101,7 @@ const FAQs = () => {
                   </li>
                   <li data-aos="fade-up" data-aos-delay="400">
                     <div className="title">
-                      <h4 className="inline-block large bold uppercase mb10 mb-xs-16">Get Involved?</h4>
+                      <h4 className="large bold uppercase mb10 mb-xs-16">Get Involved?</h4>
                     </div>
                     <div className="content">
                       <h5>
