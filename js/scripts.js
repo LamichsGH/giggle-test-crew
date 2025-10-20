@@ -612,19 +612,26 @@ $(document).ready(function() {
     });
 
 
-    // Accordions
+// Accordions
 
-    $('.accordion li').click(function() {
-        if ($(this).closest('.accordion').hasClass('one-open')) {
-            $(this).closest('.accordion').find('li').removeClass('active');
-            $(this).addClass('active');
-        } else {
-            $(this).toggleClass('active');
-        }
-        if(typeof window.mr_parallax !== "undefined"){
-            setTimeout(mr_parallax.windowLoad, 500);
-        }
-    });
+$(document)
+  .off('click.faq', '.accordion li')
+  .on('click.faq', '.accordion li', function(e) {
+      // Allow links inside accordion items to work normally
+      if ($(e.target).closest('a').length) {
+          return;
+      }
+      var $acc = $(this).closest('.accordion');
+      if ($acc.hasClass('one-open')) {
+          $acc.find('li').removeClass('active');
+          $(this).addClass('active');
+      } else {
+          $(this).toggleClass('active');
+      }
+      if (typeof window.mr_parallax !== "undefined") {
+          setTimeout(mr_parallax.windowLoad, 500);
+      }
+  });
 
     // Tabbed Content
 
