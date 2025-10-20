@@ -48,7 +48,7 @@ const Home = () => {
                   One Ball<span style={{ color: '#C9D49C', margin: '0 6px', fontSize: '120px', lineHeight: '0', verticalAlign: 'middle' }}>·</span>One World
                 </h5>
                 <p className="lead mb40 mb-xs-16" data-aos="fade-up" data-aos-delay="400" style={{ fontFamily: "'Avenir Next', system-ui, -apple-system, sans-serif", fontWeight: 400, fontSize: '18px', maxWidth: '900px', margin: '0 auto', lineHeight: '1.6' }}>
-                  We travel to communities globally where children face extreme poverty, conflict, & social challenges — using football as a tool.
+                  Helping children today, shaping brighter tomorrows...
                 </p>
               </div>
             </div>
