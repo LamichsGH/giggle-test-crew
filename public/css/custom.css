@@ -520,16 +520,16 @@ section + section { margin-top: 0 !important; }
   display: inline !important;
 }
 
-/* The green dots - behave as proper full stops */
-.hero-dot {
+/* The green separator pipe */
+.hero-separator {
   color: #C9D49C !important; /* Updated green tone */
-  font-size: 1.3em !important; /* 1.3× text stroke weight for proper full stop size */
-  font-weight: 800 !important; /* Match the text weight for consistency */
+  font-size: 1em !important; /* Same size as text */
+  font-weight: 300 !important; /* Lighter weight for visual separation */
   display: inline !important;
-  vertical-align: baseline !important; /* Perfect baseline alignment */
-  margin: 0 !important; /* No spacing gaps - adjacent to words */
+  vertical-align: middle !important; /* Center align with text */
+  margin: 0 0.5em !important; /* Breathing space around the pipe */
   line-height: inherit !important;
-  text-shadow: 0 0 6px rgba(201, 212, 156, 0.2) !important; /* Subtle glow with new color */
+  text-shadow: 0 0 6px rgba(201, 212, 156, 0.2) !important; /* Subtle glow */
 }
 
 /* Hero Tagline - larger and thicker */
@@ -552,8 +552,8 @@ section + section { margin-top: 0 !important; }
     margin: 20px 0 30px 0 !important;
   }
   
-  .hero-dot {
-    font-size: 1.3em !important; /* Keep consistent full stop proportions */
+  .hero-separator {
+    margin: 0 0.4em !important; /* Slightly less spacing on mobile */
   }
   
   .hero-tagline {
@@ -569,8 +569,8 @@ section + section { margin-top: 0 !important; }
     margin: 15px 0 25px 0 !important;
   }
   
-  .hero-dot {
-    font-size: 1.3em !important; /* Maintain proper full stop size */
+  .hero-separator {
+    margin: 0 0.3em !important; /* Even tighter spacing on small screens */
   }
   
   .hero-tagline {
