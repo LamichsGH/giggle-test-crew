@@ -45,12 +45,10 @@ const Home = () => {
               <div className="col-sm-12 text-center" data-aos="fade-up">
                 <img alt="Globall" src="/index.png" data-aos="fade-up" data-aos-delay="200" />
                 <div className="hero-subheading" data-aos="fade-up" data-aos-delay="300">
-                  <span className="one-ball-world">One Ball</span>
-                  <span className="hero-dot">•</span>
-                  <span className="one-ball-world">One World</span>
+                  <span className="one-ball-world">One Ball</span><span className="hero-dot">.</span> <span className="one-ball-world">One World</span><span className="hero-dot">.</span>
                 </div>
                 <h5 className="hero-tagline" data-aos="fade-up" data-aos-delay="400">
-                  We travel to communities globally where children face extreme poverty, conflict, & social challenges — using football as a tool.
+                  Helping children today, shaping brighter tomorrows…
                 </h5>
               </div>
             </div>
