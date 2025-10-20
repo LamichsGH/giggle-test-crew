@@ -593,10 +593,10 @@ section + section { margin-top: 0 !important; }
 
 /* ===== CONSISTENT PAGE FORMATTING ===== */
 
-/* Section headings - larger to match red box sizing */
+/* Section headings - 1x bigger than current size */
 .large.bold.uppercase {
   font-weight: 800 !important;
-  font-size: 4.5rem !important; /* Much larger to match the red box */
+  font-size: 9rem !important; /* 4.5rem * 2 = 9rem (1x bigger) */
   letter-spacing: 0.15em !important;
 }
 
@@ -611,7 +611,7 @@ section + section { margin-top: 0 !important; }
 /* Responsive adjustments for section formatting */
 @media (max-width: 768px) {
   .large.bold.uppercase {
-    font-size: 3.5rem !important; /* Scaled down for tablet */
+    font-size: 7rem !important; /* 3.5rem * 2 = 7rem (1x bigger) */
     letter-spacing: 0.12em !important;
   }
   
@@ -622,7 +622,7 @@ section + section { margin-top: 0 !important; }
 
 @media (max-width: 480px) {
   .large.bold.uppercase {
-    font-size: 2.8rem !important; /* Scaled down for mobile */
+    font-size: 5.6rem !important; /* 2.8rem * 2 = 5.6rem (1x bigger) */
     letter-spacing: 0.1em !important;
   }
   
