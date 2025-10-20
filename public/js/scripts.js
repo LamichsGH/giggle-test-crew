@@ -612,9 +612,9 @@ $(document).ready(function() {
     });
 
 
-    // Accordions (exclude FAQ accordions which are handled separately)
+    // Accordions
 
-    $('.accordion li').not('.accordion-2.faq-accordion-initialized li').click(function() {
+    $('.accordion li').click(function() {
         if ($(this).closest('.accordion').hasClass('one-open')) {
             $(this).closest('.accordion').find('li').removeClass('active');
             $(this).addClass('active');
