@@ -48,7 +48,7 @@ const Home = () => {
                   <span className="one-ball-world">One Ball</span> <span className="hero-separator">|</span> <span className="one-ball-world">One World</span>
                 </div>
                 <h5 className="hero-tagline" data-aos="fade-up" data-aos-delay="400">
-                  Helping children today, shaping brighter tomorrows…
+                  Helping children today, shaping brighter tomorrows.
                 </h5>
               </div>
             </div>

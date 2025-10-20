@@ -136,7 +136,7 @@ section + section { margin-top: 0 !important; }
   line-height: 1.6 !important;
   color: rgba(255, 255, 255, 0.9) !important;
   text-align: center !important;
-  margin: 35px auto 0 auto !important;
+  margin: 15px auto 0 auto !important; /* Reduced from 35px to 15px for closer spacing */
   max-width: 800px !important;
   letter-spacing: 0.3px !important;
 }
