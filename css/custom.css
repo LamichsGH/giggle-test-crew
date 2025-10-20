@@ -67,6 +67,13 @@ section + section { margin-top: 0 !important; }
   -webkit-transform: translateY(-50%) rotate(180deg);
 }
 
+/* Radix (rdx) open state indicator */
+.accordion-2.rdx li[data-state='open'] .title:after {
+  content: "−";
+  transform: translateY(-50%) rotate(180deg);
+  -webkit-transform: translateY(-50%) rotate(180deg);
+}
+
 /* Make ALL FAQ sections more visually appealing */
 .accordion-2 li {
   background: rgba(255, 255, 255, 0.05);
@@ -109,6 +116,20 @@ section + section { margin-top: 0 !important; }
               opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
               padding 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
   will-change: max-height, opacity, padding !important;
+}
+
+/* Radix-driven Accordion overrides */
+.accordion-2.rdx li .content {
+  max-height: none !important;
+  opacity: 1 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Open state padding when using Radix */
+.accordion-2.rdx li[data-state='open'] .content {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
 }
 
 .accordion-2 .active .content {
