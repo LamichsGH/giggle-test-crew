@@ -44,8 +44,8 @@ const Home = () => {
             <div className="row">
               <div className="col-sm-12 text-center" data-aos="fade-up">
                 <img alt="Globall" src="/index.png" data-aos="fade-up" data-aos-delay="200" />
-                <h5 className="large bold mb40 mb-xs-16" data-aos="fade-up" data-aos-delay="400">
-                  We travel to communities globally where children face extreme poverty, conflict, & social challenges, using football as a tool
+                <h5 className="mb40 mb-xs-16" data-aos="fade-up" data-aos-delay="400" style={{ fontFamily: "'Avenir Next', system-ui, -apple-system, sans-serif", fontWeight: 300, fontSize: '24px', letterSpacing: '0.15em', textTransform: 'lowercase', marginTop: '20px' }}>
+                  one ball one world
                 </h5>
               </div>
             </div>
