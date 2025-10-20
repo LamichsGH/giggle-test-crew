@@ -44,9 +44,12 @@ const Home = () => {
             <div className="row">
               <div className="col-sm-12 text-center" data-aos="fade-up">
                 <img alt="Globall" src="/index.png" data-aos="fade-up" data-aos-delay="200" />
-                <h5 className="mb40 mb-xs-16" data-aos="fade-up" data-aos-delay="400" style={{ fontFamily: "'Avenir Next', system-ui, -apple-system, sans-serif", fontWeight: 300, fontSize: '24px', letterSpacing: '0.15em', textTransform: 'lowercase', marginTop: '20px' }}>
+                <h5 className="mb24 mb-xs-16" data-aos="fade-up" data-aos-delay="300" style={{ fontFamily: "'Avenir Next', system-ui, -apple-system, sans-serif", fontWeight: 300, fontSize: '24px', letterSpacing: '0.15em', textTransform: 'lowercase', marginTop: '20px' }}>
                   one ball one world
                 </h5>
+                <p className="lead mb40 mb-xs-16" data-aos="fade-up" data-aos-delay="400" style={{ fontFamily: "'Avenir Next', system-ui, -apple-system, sans-serif", fontWeight: 400, fontSize: '18px', maxWidth: '900px', margin: '0 auto', lineHeight: '1.6' }}>
+                  We travel to communities globally where children face extreme poverty, conflict, & social challenges — using football as a tool.
+                </p>
               </div>
             </div>
           </div>
