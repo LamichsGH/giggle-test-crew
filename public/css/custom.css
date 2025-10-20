@@ -520,23 +520,22 @@ section + section { margin-top: 0 !important; }
   display: inline !important;
 }
 
-/* The green separator pipe */
+/* The white separator pipe */
 .hero-separator {
-  color: #C9D49C !important; /* Updated green tone */
+  color: white !important; /* White separator */
   font-size: 1em !important; /* Same size as text */
   font-weight: 300 !important; /* Lighter weight for visual separation */
   display: inline !important;
   vertical-align: middle !important; /* Center align with text */
   margin: 0 0.5em !important; /* Breathing space around the pipe */
   line-height: inherit !important;
-  text-shadow: 0 0 6px rgba(201, 212, 156, 0.2) !important; /* Subtle glow */
 }
 
 /* Hero Tagline - larger and thicker */
 .hero-tagline {
   font-family: 'Avenir Next Regular', 'Raleway', 'Open Sans', sans-serif !important;
   font-weight: 600 !important;
-  font-size: 1.6rem !important;
+  font-size: 1.792rem !important; /* 1.6rem * 1.12 = 1.792rem */
   line-height: 1.6 !important;
   color: rgba(255, 255, 255, 0.95) !important;
   text-align: center !important;
@@ -557,7 +556,7 @@ section + section { margin-top: 0 !important; }
   }
   
   .hero-tagline {
-    font-size: 1.4rem !important;
+    font-size: 1.568rem !important; /* 1.4rem * 1.12 = 1.568rem */
     margin: 30px auto 0 auto !important;
     padding: 0 20px !important;
   }
@@ -574,7 +573,7 @@ section + section { margin-top: 0 !important; }
   }
   
   .hero-tagline {
-    font-size: 1.2rem !important;
+    font-size: 1.344rem !important; /* 1.2rem * 1.12 = 1.344rem */
     margin: 25px auto 0 auto !important;
   }
 }
