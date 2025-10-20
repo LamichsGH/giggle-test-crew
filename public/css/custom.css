@@ -535,7 +535,7 @@ section + section { margin-top: 0 !important; }
 .hero-tagline {
   font-family: 'Avenir Next Regular', 'Raleway', 'Open Sans', sans-serif !important;
   font-weight: 600 !important;
-  font-size: 1.792rem !important; /* 1.6rem * 1.12 = 1.792rem */
+  font-size: 2.007rem !important; /* 1.792rem * 1.12 = 2.007rem */
   line-height: 1.6 !important;
   color: rgba(255, 255, 255, 0.95) !important;
   text-align: center !important;
@@ -556,7 +556,7 @@ section + section { margin-top: 0 !important; }
   }
   
   .hero-tagline {
-    font-size: 1.568rem !important; /* 1.4rem * 1.12 = 1.568rem */
+    font-size: 1.756rem !important; /* 1.568rem * 1.12 = 1.756rem */
     margin: 30px auto 0 auto !important;
     padding: 0 20px !important;
   }
@@ -573,7 +573,7 @@ section + section { margin-top: 0 !important; }
   }
   
   .hero-tagline {
-    font-size: 1.344rem !important; /* 1.2rem * 1.12 = 1.344rem */
+    font-size: 1.505rem !important; /* 1.344rem * 1.12 = 1.505rem */
     margin: 25px auto 0 auto !important;
   }
 }
@@ -593,17 +593,17 @@ section + section { margin-top: 0 !important; }
 
 /* ===== CONSISTENT PAGE FORMATTING ===== */
 
-/* Section headings - larger and thicker */
+/* Section headings - back to original size */
 .large.bold.uppercase {
   font-weight: 800 !important;
-  font-size: 3rem !important;
-  letter-spacing: 0.2em !important;
+  /* Remove custom font-size to use original theme size */
+  letter-spacing: 0.1em !important;
 }
 
-/* Section paragraphs - larger and thicker */
+/* Section paragraphs - increased by 12% */
 .lead {
   font-weight: 600 !important;
-  font-size: 1.4rem !important;
+  font-size: 1.568rem !important; /* 1.4rem * 1.12 = 1.568rem */
   line-height: 1.6 !important;
   letter-spacing: 0.3px !important;
 }
@@ -611,22 +611,22 @@ section + section { margin-top: 0 !important; }
 /* Responsive adjustments for section formatting */
 @media (max-width: 768px) {
   .large.bold.uppercase {
-    font-size: 2.4rem !important;
-    letter-spacing: 0.15em !important;
+    /* Use original theme responsive sizes */
+    letter-spacing: 0.08em !important;
   }
   
   .lead {
-    font-size: 1.25rem !important;
+    font-size: 1.4rem !important; /* 1.25rem * 1.12 = 1.4rem */
   }
 }
 
 @media (max-width: 480px) {
   .large.bold.uppercase {
-    font-size: 2rem !important;
-    letter-spacing: 0.1em !important;
+    /* Use original theme responsive sizes */
+    letter-spacing: 0.06em !important;
   }
   
   .lead {
-    font-size: 1.1rem !important;
+    font-size: 1.232rem !important; /* 1.1rem * 1.12 = 1.232rem */
   }
 }
