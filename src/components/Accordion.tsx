@@ -22,14 +22,25 @@ const Accordion = ({ items, oneOpen = true }: AccordionProps) => {
   // Update content heights when items open/close
   useEffect(() => {
     contentRefs.current.forEach((ref, index) => {
-      if (ref) {
-        if (openIndex === index) {
-          ref.style.maxHeight = `${ref.scrollHeight}px`;
-        } else {
-          ref.style.maxHeight = '0px';
-        }
+      if (!ref) return;
+      if (openIndex === index) {
+        ref.style.setProperty('max-height', `${ref.scrollHeight}px`, 'important');
+      } else {
+        ref.style.setProperty('max-height', '0px', 'important');
       }
     });
+  }, [openIndex]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (openIndex === null) return;
+      const ref = contentRefs.current[openIndex];
+      if (ref) {
+        ref.style.setProperty('max-height', `${ref.scrollHeight}px`, 'important');
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, [openIndex]);
 
   return (
