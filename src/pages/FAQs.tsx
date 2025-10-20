@@ -28,16 +28,22 @@ const FAQs = () => {
             }
           });
           
-          // Initialize FAQ accordions
-          $('.accordion-2 li .title').off('click').on('click', function(e) {
+          // Initialize FAQ accordions - prevent conflicts with general accordion handler
+          $('.accordion-2').addClass('faq-accordion-initialized');
+          
+          // Remove any existing handlers to prevent duplicates and add namespaced handlers
+          $('.accordion-2.faq-accordion-initialized li .title').off('click.faq').on('click.faq', function(e) {
             e.preventDefault();
+            e.stopPropagation(); // Prevent the general accordion handler from firing
             
             const $this = $(this);
             const $parent = $this.parent('li');
             const $content = $parent.find('.content');
             const $accordion = $this.closest('.accordion-2');
             
-            // If this is a "one-open" accordion, close others
+            console.log('FAQ accordion clicked:', $this.find('h4').text()); // Debug log
+            
+            // If this is a "one-open" accordion, close others first
             if ($accordion.hasClass('one-open')) {
               $accordion.find('li').not($parent).removeClass('active');
               $accordion.find('.content').not($content).slideUp(300);
@@ -47,9 +53,24 @@ const FAQs = () => {
             $parent.toggleClass('active');
             $content.slideToggle(300);
           });
+          
+          // Prevent the general accordion handler from affecting FAQ accordions
+          $('.accordion-2.faq-accordion-initialized li').off('click.faq-li').on('click.faq-li', function(e) {
+            e.stopPropagation(); // Block event bubbling to prevent general handler
+          });
         });
       }
     }
+    
+    // Cleanup function to remove event handlers when component unmounts
+    return () => {
+      if (typeof window !== 'undefined' && window.jQuery) {
+        const $ = window.jQuery;
+        $('.accordion-2.faq-accordion-initialized li .title').off('click.faq');
+        $('.accordion-2.faq-accordion-initialized li').off('click.faq-li');
+        $('.accordion-2').removeClass('faq-accordion-initialized');
+      }
+    };
   }, []);
 
   return (
