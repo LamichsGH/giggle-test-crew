@@ -73,6 +73,11 @@ section + section { margin-top: 0 !important; }
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
+  transition: background 0.3s ease !important;
+}
+
+.accordion-2 li:hover {
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .accordion-2 li .title {
@@ -80,6 +85,9 @@ section + section { margin-top: 0 !important; }
   border-top: none !important;
   padding-bottom: 10px !important;
   margin: 0 !important;
+  cursor: pointer !important;
+  -webkit-tap-highlight-color: transparent !important;
+  user-select: none !important;
 }
 
 .accordion-2 li .title h4 {
@@ -91,8 +99,21 @@ section + section { margin-top: 0 !important; }
 }
 
 .accordion-2 li .content {
-  padding-top: 10px !important;
+  padding-left: 35px !important;
+  padding-top: 0 !important;
   padding-bottom: 0 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              padding 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.accordion-2 .active .content {
+  opacity: 1 !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
 }
 
 .accordion-2 li .content h5 {
