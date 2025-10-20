@@ -44,7 +44,7 @@ const Home = () => {
             <div className="row">
               <div className="col-sm-12 text-center" data-aos="fade-up">
                 <img alt="Globall" src="/index.png" data-aos="fade-up" data-aos-delay="200" />
-                <h5 className="mb24 mb-xs-16" data-aos="fade-up" data-aos-delay="300" style={{ fontFamily: "'Avenir Next', system-ui, -apple-system, sans-serif", fontWeight: 800, fontSize: '36px', letterSpacing: '0.15em', marginTop: '8px' }}>
+                <h5 className="mb24 mb-xs-16" data-aos="fade-up" data-aos-delay="300" style={{ fontFamily: "'Avenir Next', system-ui, -apple-system, sans-serif", fontWeight: 700, fontSize: '36px', letterSpacing: '0.15em', marginTop: '8px' }}>
                   One Ball<span style={{ color: '#C9D49C', margin: '0 6px', fontSize: '120px', lineHeight: '0', verticalAlign: 'middle' }}>·</span>One World
                 </h5>
                 <p className="lead mb40 mb-xs-16" data-aos="fade-up" data-aos-delay="400" style={{ fontFamily: "'Avenir Next', system-ui, -apple-system, sans-serif", fontWeight: 600, fontSize: '18px', maxWidth: '900px', margin: '0 auto', lineHeight: '1.6' }}>
