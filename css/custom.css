@@ -183,3 +183,11 @@ section + section { margin-top: 0 !important; }
 h2.large.bold.uppercase {
   white-space: nowrap !important;
 }
+
+/* Responsive h2 heading sizing for mobile */
+@media (max-width: 480px) {
+  h2.large.bold.uppercase {
+    font-size: 2rem !important;
+    letter-spacing: 0.05em !important;
+  }
+}
