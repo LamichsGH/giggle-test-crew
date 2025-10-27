@@ -695,3 +695,8 @@ h1.large.bold.uppercase {
     font-size: 1.5rem !important; /* Scaled down for mobile */
   }
 }
+
+/* Prevent section headings from wrapping */
+h2.large.bold.uppercase {
+  white-space: nowrap !important;
+}
