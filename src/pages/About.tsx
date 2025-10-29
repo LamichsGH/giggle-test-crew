@@ -53,7 +53,7 @@ const About = () => {
           <div className="container">
             <div className="row">
               <div className="col-sm-10 col-sm-offset-1 text-left">
-                <h2 className="large bold uppercase mb40 mb-xs-16" data-aos="fade-up" data-aos-delay="100">What is GLO-BALL</h2>
+                <h2 className="large bold uppercase mb40 mb-xs-16" data-aos="fade-up" data-aos-delay="100">What is GLO&#8209;BALL</h2>
                 <p className="lead">
                   Here at GLO-BALL, we believe in the magic of a single football, the power it has to bring joy, unite communities, and inspire hope. In the world's most deprived areas, where opportunities are scarce but dreams are limitless, we use football as a bridge to connect, uplift, and empower underprivileged children. With just one ball, we spark laughter, friendship, and a sense of belonging, proving that even the simplest things can create the biggest impact.
                 </p>
